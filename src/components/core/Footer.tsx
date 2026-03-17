@@ -94,25 +94,25 @@ export default function Footer() {
             <h3 className="font-semibold mb-3 text-[#2C312D]">Transparencia</h3>
             <ul className="space-y-2 text-sm mb-4">
               <li>
-                <a href="/politica-donaciones" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-2">
+                <a href="#" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-2">
                   <Shield className="h-4 w-4 text-[#BDBF65]" />
-                  Política de donaciones
+                  Política de la empresa
                 </a>
               </li>
               <li>
-                <a href="/fondos" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-2">
+                <a href="#" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-2">
                   <FileText className="h-4 w-4 text-[#BDBF65]" />
                   Informe de uso de fondos
                 </a>
               </li>
               <li>
-                <a href="/rendicion-cuentas" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-2">
+                <a href="#" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-2">
                   <TrendingUp className="h-4 w-4 text-[#BDBF65]" />
-                  Rendición de cuentas 2024
+                  Rendición de cuentas 2025
                 </a>
               </li>
               <li>
-                <a href="/impacto" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-2">
+                <a href="#" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-2">
                   <Award className="h-4 w-4 text-[#BDBF65]" />
                   Reporte de impacto
                 </a>
