@@ -25,12 +25,12 @@ export default function FAQSection() {
     {
       question: "¿Dónde se realizará el evento?",
       answer:
-        "El NaviFest se llevará a cabo en el Anfiteatro de la Universidad Nacional del Santa. Contaremos con señalización y apoyo del equipo de voluntarios para orientarte al llegar."
+        "El CITE se llevará a cabo en el Anfiteatro de la Universidad Nacional del Santa. Contaremos con señalización y apoyo del equipo de voluntarios para orientarte al llegar."
     },
   ];
 
   return (
-    <section id="faq" className="py-20 md:py-28 relative overflow-hidden">
+    <section id="faq" className="py-20 md:py-28 relative overflow-hidden bg-[#F8F7F3]">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 right-10 text-9xl">❓</div>
         <div className="absolute bottom-20 left-10 text-9xl">💡</div>
@@ -44,15 +44,15 @@ export default function FAQSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-400/10 border border-indigo-400/20 mb-6">
-            <HelpCircle className="h-4 w-4 text-indigo-300" />
-            <span className="text-indigo-200 text-sm font-medium">Preguntas Frecuentes</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#5BBDD3]/10 border border-[#5BBDD3]/20 mb-6">
+            <HelpCircle className="h-4 w-4 text-[#5BBDD3]" />
+            <span className="text-[#2C312D] text-sm font-medium">Preguntas Frecuentes</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#2C312D] mb-4">
             ¿Tienes dudas?
           </h2>
-          <p className="text-lg text-white/80">
+          <p className="text-lg text-[#2C312D]/80">
             Aquí encontrarás las respuestas a las preguntas más comunes
           </p>
         </motion.div>
@@ -69,14 +69,14 @@ export default function FAQSection() {
               <Card 
                 className={`cursor-pointer transition-all duration-300 ${
                   openIndex === idx 
-                    ? 'bg-white/10 border-amber-400/40 shadow-lg shadow-amber-500/10' 
-                    : 'bg-white/5 border-white/10 hover:bg-white/8'
+                    ? 'bg-white border-2 border-[#BDBF65] shadow-lg' 
+                    : 'bg-white border border-[#2C312D]/10 hover:border-[#BDBF65]/50'
                 }`}
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
               >
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-white font-semibold text-lg flex-1 pr-4">
+                    <h3 className="text-[#2C312D] font-semibold text-lg flex-1 pr-4">
                       {faq.question}
                     </h3>
                     <motion.div
@@ -84,7 +84,7 @@ export default function FAQSection() {
                       transition={{ duration: 0.3 }}
                       className="shrink-0"
                     >
-                      <ChevronDown className={`h-5 w-5 ${openIndex === idx ? 'text-amber-300' : 'text-white/50'}`} />
+                      <ChevronDown className={`h-5 w-5 ${openIndex === idx ? 'text-[#BDBF65]' : 'text-[#2C312D]/50'}`} />
                     </motion.div>
                   </div>
 
@@ -97,8 +97,8 @@ export default function FAQSection() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="pt-4 mt-4 border-t border-white/10">
-                          <p className="text-white/75 leading-relaxed">
+                        <div className="pt-4 mt-4 border-t border-[#2C312D]/10">
+                          <p className="text-[#2C312D]/75 leading-relaxed">
                             {faq.answer}
                           </p>
                         </div>

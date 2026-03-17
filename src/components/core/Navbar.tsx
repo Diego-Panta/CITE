@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, HeartHandshake, Gift } from "lucide-react";
+import { Menu, X, HeartHandshake, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface NavbarProps {
@@ -12,36 +12,32 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
 
   const navLinks = [
     { label: "Inicio", href: "#hero" },
-    { label: "Sobre", href: "#about" },
-    { label: "Programa", href: "#schedule" },
-    { label: "Aliados", href: "#partners" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Contacto", href: "#contact" }
+    { label: "Nosotros", href: "#nosotros" },
+    { label: "Líneas de acción", href: "#lineas-accion" },
+    { label: "Impacto", href: "#impacto" },
+    { label: "Comunidad", href: "#comunidad" },
+    { label: "Contacto", href: "#contacto" }
   ];
 
-  const handleDonateClick = () => {
-    document.getElementById("donate")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md supports-backdrop-filter:bg-red-950/80 bg-red-950/70 border-b border-white/10 shadow-lg">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#2C312D]/10 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3 cursor-pointer" onClick={scrollToTop}>
-            <div className="w-10 h-10 rounded-xl bg-linear-to-br from-amber-400 to-amber-600 flex items-center justify-center">
-              <Gift className="h-6 w-6 text-red-950" />
+            <div className="w-10 h-10 rounded-xl bg-[#BDBF65] flex items-center justify-center">
+            <span className="text-[#2C312D] font-bold text-xl">C</span>
             </div>
-            <span className="font-bold tracking-wide text-xl">NaviFest II</span>
+            <span className="font-bold tracking-wide text-xl text-[#2C312D]">CITE</span>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-white/80 hover:text-amber-300 transition-colors"
+                className="text-sm font-medium text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors"
               >
                 {link.label}
               </a>
@@ -49,29 +45,21 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
-            <a href="/galeria" target="_blank">
-              <Button
-                className="bg-linear-to-r from-amber-400 to-amber-500 text-red-950 hover:from-amber-500 hover:to-amber-600 font-bold shadow-lg"
-              >
-                <HeartHandshake className="mr-2 h-4 w-4" />
-                Galeria Navifest 2024
-              </Button>
-            </a>
             <Button
-              className="bg-linear-to-r from-amber-400 to-amber-500 text-red-950 hover:from-amber-500 hover:to-amber-600 font-bold shadow-lg"
-              onClick={handleDonateClick}
+              className="bg-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/90 font-bold shadow-md"
+              onClick={() => window.open("/reporte-impacto", "_blank")}
             >
               <HeartHandshake className="mr-2 h-4 w-4" />
-              Donar ahora
+              Reporte de impacto
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
+            className="md:hidden p-2 rounded-lg bg-[#BDBF65]/10 hover:bg-[#BDBF65]/20 transition-colors border border-[#BDBF65]/30"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-6 w-6 text-[#2C312D]" /> : <Menu className="h-6 w-6 text-[#2C312D]" />}
           </button>
         </div>
       </div>
@@ -84,36 +72,28 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden border-t border-white/10 bg-red-950/95 backdrop-blur-md"
+            className="md:hidden overflow-hidden border-t border-[#2C312D]/10 bg-white"
           >
             <nav className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block py-2 text-white/80 hover:text-amber-300 transition-colors font-medium"
+                  className="block py-2 text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
-              <a href="/galeria" target="_blank">
-                <Button
-                  className="w-full bg-linear-to-r from-amber-400 to-amber-500 text-red-950 hover:from-amber-500 hover:to-amber-600 font-bold shadow-lg"
-                >
-                  <HeartHandshake className="mr-2 h-4 w-4" />
-                  Galeria Navifest 2024
-                </Button>
-              </a>
               <Button
-                className="w-full bg-linear-to-r from-amber-400 to-amber-500 text-red-950 hover:from-amber-500 hover:to-amber-600 font-bold mt-4"
+                className="w-full bg-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/90 font-bold mt-4"
                 onClick={() => {
                   setIsMenuOpen(false);
-                  handleDonateClick();
+                  window.open("/reporte-impacto", "_blank");
                 }}
               >
                 <HeartHandshake className="mr-2 h-4 w-4" />
-                Donar ahora
+                Reporte de impacto
               </Button>
             </nav>
           </motion.div>

@@ -370,7 +370,7 @@ export default function Finance() {
 
             <p className="text-lg text-white/80 leading-relaxed max-w-2xl mx-auto">
               Visualiza el impacto de nuestra comunidad universitaria. 
-              Cada donación cuenta para hacer posible la NaviFest.
+              Cada donación cuenta para hacer posible el CITE.
             </p>
           </motion.div>
         </div>

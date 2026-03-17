@@ -1,97 +1,143 @@
 import React from "react";
-import { Gift, ExternalLink, Heart } from "lucide-react";
+import { Heart, ExternalLink, Users, Map, BookOpen, Handshake, Mail, Phone, MapPin, FileText, TrendingUp, Award, Shield } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-red-950/80 backdrop-blur-md">
+    <footer className="border-t border-[#2C312D]/10 bg-white/95 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          <div className="md:col-span-2">
+        {/* Grid principal con 4 columnas simétricas */}
+        <div className="grid md:grid-cols-4 gap-6 lg:gap-8 mb-8">
+          
+          {/* Columna 1: Info CITE - Ocupa 1 columna en mobile y 1 en desktop */}
+          <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-linear-to-br from-amber-400 to-amber-600 flex items-center justify-center">
-                <Gift className="h-5 w-5 text-red-950" />
+              <div className="w-8 h-8 rounded-lg bg-[#BDBF65] flex items-center justify-center">
+                <span className="text-[#2C312D] font-bold text-lg">C</span>
               </div>
-              <span className="font-bold text-xl">NaviFest</span>
+              <span className="font-bold text-xl text-[#2C312D]">CITE</span>
             </div>
-            <p className="text-white/70 text-sm leading-relaxed mb-3">
-              Un evento benéfico organizado con amor por el <strong>Centro Pastoral Universitario</strong> 
-              de la <strong>Universidad Nacional del Santa</strong>, comprometidos con transformar vidas esta Navidad.
+            <p className="text-[#2C312D]/70 text-sm leading-relaxed mb-3">
+              <strong className="text-[#2C312D]">Laboratorio urbano</strong> liderado por juventudes que imagina y construye ciudades más justas.
             </p>
-            <div className="flex items-center gap-1 text-amber-300 text-sm">
+            <div className="flex items-center gap-1 text-[#D79259] text-sm">
               <Heart className="h-3 w-3" />
-              <span>Juntos llevamos alegría a quienes más lo necesitan</span>
+              <span>Transformamos territorios</span>
             </div>
           </div>
 
+          {/* Columna 2: Ejes de acción */}
           <div>
-            <h3 className="font-semibold mb-3">Contacto</h3>
-            <ul className="space-y-2 text-white/70 text-sm">
+            <h3 className="font-semibold mb-3 text-[#2C312D]">Ejes de acción</h3>
+            <ul className="space-y-2 text-[#2C312D]/70 text-sm">
               <li className="flex items-start gap-2">
-                <span>📧</span>
+                <Users className="h-4 w-4 text-[#D79259] shrink-0 mt-0.5" />
+                <span>Comunidad activa</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <BookOpen className="h-4 w-4 text-[#5BBDD3] shrink-0 mt-0.5" />
+                <span>Investigación y formación</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Handshake className="h-4 w-4 text-[#9E5BD3] shrink-0 mt-0.5" />
+                <span>Alianzas con impacto</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Map className="h-4 w-4 text-[#BDBF65] shrink-0 mt-0.5" />
+                <span>CITE en proceso</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Columna 3: Contacto + Redes */}
+          <div>
+            <h3 className="font-semibold mb-3 text-[#2C312D]">Contacto</h3>
+            <ul className="space-y-2 text-[#2C312D]/70 text-sm">
+              <li className="flex items-start gap-2">
+                <Mail className="h-4 w-4 text-[#BDBF65] shrink-0 mt-0.5" />
                 <a 
-                  href="mailto:niltonencarnacion17@gmail.com"
-                  className="hover:text-amber-300 transition-colors"
+                  href="mailto:cite@laboratoriourbano.org"
+                  className="hover:text-[#BDBF65] transition-colors"
                 >
-                  niltonencarnacion17@gmail.com
+                  cite@laburbano.org
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <span>📱</span>
+                <Phone className="h-4 w-4 text-[#BDBF65] shrink-0 mt-0.5" />
                 <a 
-                  href="https://wa.link/tpuxiu"
+                  href="https://wa.link/cite"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-amber-300 transition-colors flex items-center gap-1"
+                  className="hover:text-[#BDBF65] transition-colors flex items-center gap-1"
                 >
                   (+51) 951 011 604
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
               <li className="flex items-start gap-2">
-                <span>📍</span>
-                <span>Chimbote, Ancash, Perú</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span>🏫</span>
-                <span>Universidad Nacional del Santa</span>
+                <MapPin className="h-4 w-4 text-[#BDBF65] shrink-0 mt-0.5" />
+                <span>Lima, Perú</span>
               </li>
             </ul>
+
+            <div className="mt-4">
+              <h4 className="font-semibold mb-2 text-xs uppercase text-[#2C312D]/60">Redes</h4>
+              <div className="flex gap-3">
+                <a href="https://www.instagram.com/cite.urb/" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors text-sm">Instagram</a>
+                <a href="https://www.youtube.com/channel/UCDVi2AdPzPFqyNJjBDU8Lig" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors text-sm">Youtube</a>
+                <a href="https://www.linkedin.com/company/cite-ciudadresiliente/" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors text-sm">LinkedIn</a>
+              </div>
+            </div>
           </div>
 
+          {/* Columna 4: Transparencia + Desarrollador - NUEVA COLUMNA */}
           <div>
-            <h3 className="font-semibold mb-3">Transparencia</h3>
-            <ul className="space-y-2 text-sm mb-6">
+            <h3 className="font-semibold mb-3 text-[#2C312D]">Transparencia</h3>
+            <ul className="space-y-2 text-sm mb-4">
               <li>
-                <a href="/politica-donaciones" className="text-white/70 hover:text-amber-300 transition-colors flex items-center gap-1">
+                <a href="/politica-donaciones" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-2">
+                  <Shield className="h-4 w-4 text-[#BDBF65]" />
                   Política de donaciones
                 </a>
               </li>
               <li>
-                <a href="/fondos" className="text-white/70 hover:text-amber-300 transition-colors flex items-center gap-1">
+                <a href="/fondos" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-2">
+                  <FileText className="h-4 w-4 text-[#BDBF65]" />
                   Informe de uso de fondos
+                </a>
+              </li>
+              <li>
+                <a href="/rendicion-cuentas" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-2">
+                  <TrendingUp className="h-4 w-4 text-[#BDBF65]" />
+                  Rendición de cuentas 2024
+                </a>
+              </li>
+              <li>
+                <a href="/impacto" className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-2">
+                  <Award className="h-4 w-4 text-[#BDBF65]" />
+                  Reporte de impacto
                 </a>
               </li>
             </ul>
 
-            <div className="pt-4 border-t border-white/20">
-              <h4 className="font-semibold mb-2 text-xs uppercase text-white/60">Desarrollado por</h4>
-              <div className="space-y-1 text-xs text-white/70">
-                <div className="font-medium text-amber-300">Nilton Ramos Encarnacion</div>
-                <div className="flex flex-col gap-1">
+            <div className="pt-4 border-t border-[#2C312D]/20">
+              <h4 className="font-semibold mb-2 text-xs uppercase text-[#2C312D]/60">Desarrollado por</h4>
+              <div className="space-y-1">
+                <div className="font-medium text-sm text-[#BDBF65]">José Diego Panta Piscoche</div>
+                <div className="flex gap-3 text-xs">
                   <a 
-                    href="https://www.linkedin.com/in/niltonramosencarnacion/"
+                    href="https://www.linkedin.com/in/diego-panta-piscoche/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-amber-300 transition-colors flex items-center gap-1"
+                    className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-1"
                   >
                     LinkedIn
                     <ExternalLink className="h-3 w-3" />
                   </a>
                   <a 
-                    href="https://niltonramosencarnacion.vercel.app/"
+                    href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-amber-300 transition-colors flex items-center gap-1"
+                    className="text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors flex items-center gap-1"
                   >
                     Portafolio
                     <ExternalLink className="h-3 w-3" />
@@ -102,17 +148,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-6 text-center">
-          <p className="text-white/60 text-sm">
-            © {new Date().getFullYear()} NaviFest — Centro Pastoral Universitario UNS <br></br>
-            <a 
-              href="https://www.linkedin.com/in/niltonramosencarnacion/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-amber-300 transition-colors"
-            >
-              Nilton Ramos Encarnacion
-            </a>
+        {/* Línea divisoria inferior */}
+        <div className="border-t border-[#2C312D]/10 pt-6 text-center">
+          <p className="text-[#2C312D]/60 text-sm">
+            © {new Date().getFullYear()} CITE — Laboratorio urbano por ciudades más justas
+          </p>
+          <p className="text-[#2C312D]/40 text-xs mt-2">
+            Diseño y desarrollo con enfoque participativo y transparente
           </p>
         </div>
       </div>

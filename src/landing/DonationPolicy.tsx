@@ -75,7 +75,7 @@ export default function DonationPolicy() {
             </h1>
 
             <p className="text-lg text-white/80 leading-relaxed max-w-2xl mx-auto">
-              En NaviFest, creemos que la confianza es el fundamento de toda acción solidaria. 
+              En CITE, creemos que la confianza es el fundamento de toda acción solidaria. 
               Esta política garantiza que cada donación sea utilizada de manera responsable y transparente.
             </p>
           </motion.div>

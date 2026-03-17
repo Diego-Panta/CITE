@@ -351,7 +351,7 @@ export default function DonationForm() {
                   <div className="text-center pt-4 border-t border-white/10">
                     <p className="text-white/60 text-sm">
                       Al registrar tu donación, aceptas que esta información sea utilizada para 
-                      fines de transparencia y organización del evento NaviFest.
+                      fines de transparencia y organización del programa CITE.
                     </p>
                   </div>
                 </form>

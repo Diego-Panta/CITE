@@ -37,7 +37,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     try {
       const result = await WhatsAppService.sendImageMessage(
         phone, 
-        `¡Hola! 🎄\n\nGracias por tu interés en NaviFest 2025. Te comparto información sobre nuestro evento benéfico organizado por el Centro Pastoral Universitario de la UNS.\n\n🎁 *Qué incluye tu participación:*\n• Show en vivo con artistas locales\n• Experiencia navideña única\n• Apoyo directo a familias necesitadas\n\n📍 *Fecha:* 28 de Noviembre, 2025\n🕕 *Hora:* 6:00 PM\n🎫 *Entrada:* 1 juguete o donación voluntaria\n\n¿Te gustaría saber más sobre cómo participar o apoyar nuestra causa? ¡Estamos aquí para ayudarte! 🎁`
+        `¡Hola! 🎄\n\nGracias por tu interés en CITE 2025. Te comparto información sobre nuestro programa de voluntariado de la UNS enfocado en resiliencia urbana y gestión de riesgos.\n\n🎁 *Qué incluye tu participación:*\n• Show en vivo con artistas locales\n• Experiencia navideña única\n• Apoyo directo a familias necesitadas\n\n📍 *Fecha:* 28 de Noviembre, 2025\n🕕 *Hora:* 6:00 PM\n🎫 *Entrada:* 1 juguete o donación voluntaria\n\n¿Te gustaría saber más sobre cómo participar o apoyar nuestra causa? ¡Estamos aquí para ayudarte! 🎁`
       );
       
       if (result.success) {

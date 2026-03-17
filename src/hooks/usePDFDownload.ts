@@ -38,7 +38,7 @@ export const usePDFDownload = ({ onSuccess, onError }: UsePDFDownloadProps = {})
     pdf.setFont('helvetica');
     pdf.setFontSize(20);
     pdf.setTextColor(127, 29, 29);
-    pdf.text('NaviFest 2025', 105, 20, { align: 'center' });
+    pdf.text('CITE 2025', 105, 20, { align: 'center' });
     
     pdf.setFontSize(16);
     pdf.setTextColor(251, 191, 36);
@@ -61,7 +61,7 @@ export const usePDFDownload = ({ onSuccess, onError }: UsePDFDownloadProps = {})
       yPosition += 7;
     });
     
-    pdf.save('NaviFest-Programa-Simple.pdf');
+    pdf.save('CITE-Programa-Simple.pdf');
   };
 
   return {

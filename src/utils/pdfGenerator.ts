@@ -37,7 +37,7 @@ export const generateEventPDF = async (data: PDFData) => {
       <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 20px; padding: 12px 24px; background: rgba(251, 191, 36, 0.2); border-radius: 50px; border: 1px solid rgba(251, 191, 36, 0.3);">
         <span style="font-size: 18px; color: #fbbf24;">🎄 Programa Oficial 🎄</span>
       </div>
-      <h1 style="font-size: 36px; font-weight: bold; margin: 0 0 10px 0; color: white;">NaviFest 2025</h1>
+      <h1 style="font-size: 36px; font-weight: bold; margin: 0 0 10px 0; color: white;">CITE 2025</h1>
       <h2 style="font-size: 24px; font-weight: 300; margin: 0 0 20px 0; color: #fbbf24;">Una Noche de Magia y Solidaridad</h2>
       <p style="font-size: 16px; color: #fecaca; margin: 0;">Centro Pastoral Universitario - Universidad Nacional del Santa</p>
       <p style="font-size: 14px; color: #fecaca; margin: 5px 0 0 0;">Chimbote, Ancash, Perú</p>
@@ -135,7 +135,7 @@ export const generateEventPDF = async (data: PDFData) => {
       heightLeft -= pageHeight;
     }
 
-    pdf.save('NaviFest-Programa-2025.pdf');
+    pdf.save('CITE-Programa-2025.pdf');
     
     return true;
   } catch (error) {

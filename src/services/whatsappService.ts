@@ -74,7 +74,7 @@ export class WhatsAppService {
       
       const imageData = await this.imageToBase64(randomImage);
 
-      const defaultCaption = `¡Hola! Gracias por tu interés en NaviFest 🎄\n\nTe comparto información sobre nuestro evento benéfico. ¿En qué más puedo ayudarte?`;
+      const defaultCaption = `¡Hola! Gracias por tu interés en CITE 🎄\n\nTe comparto información sobre nuestro programa de voluntariado de la UNS enfocado en resiliencia urbana y gestión de riesgos. ¿En qué más puedo ayudarte?`;
       const finalCaption = caption || defaultCaption;
 
       const response = await fetch(this.API_URL, {
@@ -112,8 +112,8 @@ export class WhatsAppService {
 
   static async sendWelcomeMessage(phone: string, userName: string = ''): Promise<WhatsAppResponse> {
     const personalizedCaption = userName 
-      ? `¡Hola ${userName.toUpperCase()}! 🎄\n\nGracias por contactarnos desde el formulario de NaviFest. Te comparto información sobre nuestro evento benéfico. Estamos aquí para resolver todas tus dudas. ¡Juntos haremos una Navidad más feliz! 🎁\n\n¿En qué más puedo ayudarte?`
-      : `¡Hola! 🎄\n\nGracias por contactarnos desde el formulario de NaviFest. Te comparto información sobre nuestro evento benéfico. Estamos aquí para resolver todas tus dudas. ¡Juntos haremos una Navidad más feliz! 🎁\n\n¿En qué más puedo ayudarte?`;
+      ? `¡Hola ${userName.toUpperCase()}! 🎄\n\nGracias por contactarnos desde el formulario de CITE. Te comparto información sobre nuestro programa de voluntariado de la UNS enfocado en resiliencia urbana y gestión de riesgos. Estamos aquí para resolver todas tus dudas.\n\n¿En qué más puedo ayudarte?`
+      : `¡Hola! 🎄\n\nGracias por contactarnos desde el formulario de CITE. Te comparto información sobre nuestro programa de voluntariado de la UNS enfocado en resiliencia urbana y gestión de riesgos. Estamos aquí para resolver todas tus dudas.\n\n¿En qué más puedo ayudarte?`;
 
     return this.sendImageMessage(phone, personalizedCaption);
   }

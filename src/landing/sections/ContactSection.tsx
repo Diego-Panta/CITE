@@ -94,11 +94,9 @@ export default function ContactSection() {
         
         if (!whatsappResult.success) {
           console.warn('WhatsApp no se pudo enviar:', whatsappResult.error);
-          // No mostramos error al usuario para no interrumpir la experiencia
         }
       }
 
-      // Limpiar formulario
       setFormData({
         nombres: "",
         correo: "",
@@ -107,7 +105,6 @@ export default function ContactSection() {
         mensaje: ""
       });
 
-      // Mostrar mensaje de éxito
       alert("¡Mensaje enviado correctamente! Te contactaremos pronto." + (formData.telefono ? " También te hemos enviado información por WhatsApp." : ""));
 
     } catch (error) {
@@ -163,9 +160,9 @@ export default function ContactSection() {
   ];
 
   const socialLinks = [
-    { icon: Instagram, label: "Instagram", link: "https://instagram.com", handle: "@navifest" },
-    { icon: Facebook, label: "Facebook", link: "https://facebook.com", handle: "NaviFest Oficial" },
-    { icon: Linkedin, label: "LinkedIn", link: "https://linkedin.com/company/", handle: "NaviFest" }
+    { icon: Instagram, label: "Instagram", link: "https://instagram.com", handle: "@cite" },
+    { icon: Facebook, label: "Facebook", link: "https://facebook.com", handle: "CITE Oficial" },
+    { icon: Linkedin, label: "LinkedIn", link: "https://linkedin.com/company/", handle: "CITE" }
   ];
 
   const tipoOpciones = [
@@ -174,7 +171,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 md:py-28 relative overflow-hidden">
+    <section id="contact" className="py-20 md:py-28 relative overflow-hidden bg-[#F8F7F3]">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-40 left-20 text-9xl">📧</div>
         <div className="absolute bottom-40 right-20 text-9xl">💬</div>
@@ -188,21 +185,21 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-400/10 border border-green-400/20 mb-6">
-            <Send className="h-4 w-4 text-green-300" />
-            <span className="text-green-200 text-sm font-medium">Hablemos</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#BDBF65]/10 border border-[#BDBF65]/20 mb-6">
+            <Send className="h-4 w-4 text-[#5BBDD3]" />
+            <span className="text-[#2C312D] text-sm font-medium">Hablemos</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#2C312D] mb-6">
             Conversemos:
-            <span className="block text-transparent bg-clip-text bg-linear-to-r from-amber-300 to-yellow-300">
+            <span className="block text-[#BDBF65]">
               Tu Voz Importa
             </span>
           </h2>
 
-          <p className="text-lg text-white/80 leading-relaxed">
+          <p className="text-lg text-[#2C312D]/80 leading-relaxed">
             Ya sea que quieras conocer más sobre la causa, convertirte en voluntario, proponer una alianza 
-            o simplemente compartir tus ideas, <span className="text-amber-300 font-semibold">estamos aquí para escucharte</span>.
+            o simplemente compartir tus ideas, <span className="text-[#D79259] font-semibold">estamos aquí para escucharte</span>.
           </p>
         </motion.div>
 
@@ -214,14 +211,14 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-2"
           >
-            <Card className="bg-white/5 border-white/10 backdrop-blur-md">
+            <Card className="bg-white border border-[#2C312D]/10 shadow-md">
               <CardHeader>
-                <CardTitle className="text-2xl text-white">Envíanos un mensaje</CardTitle>
+                <CardTitle className="text-2xl text-[#2C312D]">Envíanos un mensaje</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <label className="text-sm text-white/80 font-medium">
+                    <label className="text-sm text-[#2C312D]/80 font-medium">
                       Nombres Completos <span className="text-red-400">*</span>
                     </label>
                     <Input
@@ -229,14 +226,14 @@ export default function ContactSection() {
                       value={formData.nombres}
                       onChange={handleInputChange}
                       placeholder="NILTON RAMOS ENCARNACION"
-                      className="bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-amber-400/50"
+                      className="bg-white border border-[#2C312D]/20 text-[#2C312D] placeholder:text-[#2C312D]/40 focus:border-[#BDBF65] focus:ring-[#BDBF65]/20"
                       required
                     />
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <label className="text-sm text-white/80 font-medium">
+                      <label className="text-sm text-[#2C312D]/80 font-medium">
                         Correo electrónico <span className="text-red-400">*</span>
                       </label>
                       <Input
@@ -245,15 +242,15 @@ export default function ContactSection() {
                         value={formData.correo}
                         onChange={handleInputChange}
                         placeholder="ejemplo@gmail.com"
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-amber-400/50"
+                        className="bg-white border border-[#2C312D]/20 text-[#2C312D] placeholder:text-[#2C312D]/40 focus:border-[#BDBF65] focus:ring-[#BDBF65]/20"
                         required
                       />
-                      <p className="text-xs text-amber-300/80">
+                      <p className="text-xs text-[#5BBDD3]">
                         * Solo aceptamos correos de Gmail
                       </p>
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm text-white/80 font-medium">
+                      <label className="text-sm text-[#2C312D]/80 font-medium">
                         Teléfono <span className="text-red-400">*</span>
                       </label>
                       <Input
@@ -262,43 +259,43 @@ export default function ContactSection() {
                         value={formData.telefono}
                         onChange={handleInputChange}
                         placeholder="+51 999 999 999"
-                        className="bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-amber-400/50"
+                        className="bg-white border border-[#2C312D]/20 text-[#2C312D] placeholder:text-[#2C312D]/40 focus:border-[#BDBF65] focus:ring-[#BDBF65]/20"
                         required
                       />
-                      <p className="text-xs text-amber-300/80">
+                      <p className="text-xs text-[#5BBDD3]">
                         * Te enviaremos información automáticamente por WhatsApp
                       </p>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm text-white/80 font-medium">
+                    <label className="text-sm text-[#2C312D]/80 font-medium">
                       ¿Cómo quieres apoyar? <span className="text-red-400">*</span>
                     </label>
                     <select
                       name="tipo"
                       value={formData.tipo}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:border-amber-400/50 focus:outline-none focus:ring-2 focus:ring-amber-400/20"
+                      className="w-full px-4 py-3 rounded-xl bg-white border border-[#2C312D]/20 text-[#2C312D] focus:border-[#BDBF65] focus:outline-none focus:ring-2 focus:ring-[#BDBF65]/20"
                       required
                     >
                       {tipoOpciones.map((opcion) => (
                         <option 
                           key={opcion.value} 
                           value={opcion.value}
-                          className="bg-red-950 text-white"
+                          className="bg-white text-[#2C312D]"
                         >
                           {opcion.label}
                         </option>
                       ))}
                     </select>
-                    <p className="text-xs text-amber-300/80">
+                    <p className="text-xs text-[#5BBDD3]">
                       * Selecciona cómo te gustaría participar
                     </p>
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm text-white/80 font-medium">
+                    <label className="text-sm text-[#2C312D]/80 font-medium">
                       Mensaje <span className="text-red-400">*</span>
                     </label>
                     <Textarea
@@ -307,7 +304,7 @@ export default function ContactSection() {
                       onChange={handleInputChange}
                       placeholder="Comparte tus ideas, preguntas o propuestas..."
                       rows={5}
-                      className="bg-white/10 border-white/20 text-white placeholder:text-white/40 focus:border-amber-400/50 resize-none"
+                      className="bg-white border border-[#2C312D]/20 text-[#2C312D] placeholder:text-[#2C312D]/40 focus:border-[#BDBF65] focus:ring-[#BDBF65]/20 resize-none"
                       required
                     />
                   </div>
@@ -317,7 +314,7 @@ export default function ContactSection() {
                       type="submit"
                       size="lg"
                       disabled={isSubmitting}
-                      className="flex-1 bg-linear-to-r from-amber-400 to-amber-500 text-red-950 hover:from-amber-500 hover:to-amber-600 font-bold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="flex-1 bg-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/90 font-bold shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <Send className="mr-2 h-5 w-5" />
                       {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
@@ -329,7 +326,7 @@ export default function ContactSection() {
                       variant="outline"
                       onClick={handleSendWhatsApp}
                       disabled={isSendingWhatsApp || !formData.telefono}
-                      className="flex-1 border-2 border-green-500/50 bg-green-500/10 text-green-300 hover:bg-green-500/20 font-bold disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="flex-1 border-2 border-[#5BBDD3] bg-[#5BBDD3]/10 text-[#2C312D] hover:bg-[#5BBDD3]/20 font-bold disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       <MessageCircle className="mr-2 h-5 w-5" />
                       {isSendingWhatsApp ? "Enviando..." : "Recibir Info por WhatsApp"}
@@ -347,29 +344,29 @@ export default function ContactSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6"
           >
-            <Card className="bg-linear-to-br from-amber-500/20 to-red-500/20 border-amber-400/30 backdrop-blur-md">
+            <Card className="bg-[#D79259]/10 border-[#D79259]/30">
               <CardHeader>
-                <CardTitle className="text-lg text-white">Contacto Directo</CardTitle>
+                <CardTitle className="text-lg text-[#2C312D]">Contacto Directo</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 {contactInfo.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <div className="shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
-                      <item.icon className="h-5 w-5 text-amber-300" />
+                    <div className="shrink-0 w-10 h-10 rounded-lg bg-[#BDBF65]/10 flex items-center justify-center">
+                      <item.icon className="h-5 w-5 text-[#BDBF65]" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="text-sm text-white/70">{item.label}</div>
+                      <div className="text-sm text-[#2C312D]/70">{item.label}</div>
                       {item.link ? (
                         <a 
                           href={item.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-white font-medium hover:text-amber-300 transition-colors wrap-break-word"
+                          className="text-[#2C312D] font-medium hover:text-[#BDBF65] transition-colors wrap-break-word"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <div className="text-white font-medium wrap-break-word">{item.value}</div>
+                        <div className="text-[#2C312D] font-medium wrap-break-word">{item.value}</div>
                       )}
                     </div>
                   </div>
@@ -377,9 +374,9 @@ export default function ContactSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 border-white/10">
+            <Card className="bg-white border border-[#2C312D]/10">
               <CardHeader>
-                <CardTitle className="text-lg text-white">Síguenos</CardTitle>
+                <CardTitle className="text-lg text-[#2C312D]">Síguenos</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
                 {socialLinks.map((social, idx) => (
@@ -388,13 +385,13 @@ export default function ContactSection() {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 group"
+                    className="flex items-center gap-3 p-3 rounded-xl bg-[#F8F7F3] hover:bg-[#BDBF65]/10 transition-all duration-300 group"
                   >
-                    <div className="shrink-0 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <social.icon className="h-5 w-5 text-white/70 group-hover:text-amber-300 transition-colors" />
+                    <div className="shrink-0 w-10 h-10 rounded-lg bg-[#BDBF65]/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <social.icon className="h-5 w-5 text-[#2C312D]/70 group-hover:text-[#BDBF65] transition-colors" />
                     </div>
                     <div className="flex-1">
-                      <div className="text-sm text-white/90 font-medium group-hover:text-amber-300 transition-colors">
+                      <div className="text-sm text-[#2C312D] font-medium group-hover:text-[#BDBF65] transition-colors">
                         {social.handle}
                       </div>
                     </div>
@@ -403,12 +400,12 @@ export default function ContactSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-linear-to-br from-purple-500/20 to-blue-500/20 border-purple-400/30">
+            <Card className="bg-[#9E5BD3]/10 border-[#9E5BD3]/30">
               <CardContent className="p-6 text-center">
-                <p className="text-white/90 text-sm leading-relaxed italic">
+                <p className="text-[#2C312D]/80 text-sm leading-relaxed italic">
                   "Cada mensaje que recibimos nos inspira a seguir trabajando por una Navidad más justa y solidaria."
                 </p>
-                <p className="text-amber-300 font-semibold mt-3">
+                <p className="text-[#BDBF65] font-semibold mt-3">
                   ¡Esperamos saber de ti pronto! 💛
                 </p>
               </CardContent>

@@ -3,6 +3,25 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Tipografía para títulos (Nunito Sans ExtraBold) */
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url('/fonts/NunitoSans-ExtraBold.ttf') format('ttf');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tipografía principal (Space Mono Regular) */
+@font-face {
+  font-family: 'Space Mono';
+  src: url('/fonts/SpaceMono-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Mantenemos Poppins como fallback o para usos específicos */
 @font-face {
   font-family: 'Poppins';
   src: url('/fonts/Poppins-Light.woff2') format('woff2');
@@ -43,8 +62,24 @@
   font-display: swap;
 }
 
+/* Tipografía base actualizada */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Space Mono', 'Poppins', monospace, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Clases utilitarias para títulos */
+h1, h2, h3, h4, h5, h6,
+.heading-2x {
+  font-family: 'Nunito Sans', 'Poppins', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.heading-1x {
+  font-family: 'Nunito Sans', 'Poppins', sans-serif;
+  font-weight: 800;
 }
 
 @theme inline {
@@ -86,73 +121,86 @@ body {
 }
 
 :root {
-  --wave-color: #dd3201;
+  --wave-color: #BDBF65; /* Actualizado a Verde Tomatillo */
   --radius: 0.625rem;
-  --background: #262626;
-  --foreground: #fafafa;
-  --card: #404040;
-  --card-foreground: #fafafa;
-  --popover: #404040;
-  --popover-foreground: #fafafa;
-  --primary: #e5e5e5;
-  --primary-foreground: #404040;
-  --secondary: #525252;
-  --secondary-foreground: #fafafa;
-  --muted: #525252;
-  --muted-foreground: #a3a3a3;
-  --accent: #525252;
-  --accent-foreground: #fafafa;
-  --destructive: #b91c1c;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.15);
-  --ring: #737373;
-  --chart-1: #3730a3;
-  --chart-2: #0d9488;
-  --chart-3: #d97706;
-  --chart-4: #9333ea;
-  --chart-5: #dc2626;
-  --sidebar: #404040;
-  --sidebar-foreground: #fafafa;
-  --sidebar-primary: #3730a3;
-  --sidebar-primary-foreground: #fafafa;
-  --sidebar-accent: #525252;
-  --sidebar-accent-foreground: #fafafa;
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #737373;
+  
+  /* Nuevos colores */
+  --background: #F8F7F3; /* COLOR LUZ - Base principal */
+  --foreground: #2C312D; /* COLOR SOMBRA - Texto principal */
+  
+  /* Actualizaciones con los nuevos colores */
+  --card: #FFFFFF;
+  --card-foreground: #2C312D;
+  --popover: #FFFFFF;
+  --popover-foreground: #2C312D;
+  --primary: #BDBF65; /* VERDE TOMATILLO - Color principal */
+  --primary-foreground: #2C312D; /* Texto oscuro sobre fondo claro */
+  --secondary: #5BBDD3; /* ACENTO FRÍO */
+  --secondary-foreground: #2C312D;
+  --muted: #E5E4E0;
+  --muted-foreground: #4A4F4B;
+  --accent: #D79259; /* ACENTO CÁLIDO */
+  --accent-foreground: #2C312D;
+  --destructive: #DC2626;
+  --border: rgba(44, 49, 45, 0.15); /* Sombra con opacidad */
+  --input: rgba(44, 49, 45, 0.1);
+  --ring: #BDBF65; /* Verde Tomatillo para focus */
+  
+  /* Charts manteniendo la armonía con la nueva paleta */
+  --chart-1: #BDBF65; /* Verde Tomatillo */
+  --chart-2: #5BBDD3; /* Acento Frío */
+  --chart-3: #D79259; /* Acento Cálido */
+  --chart-4: #9E5BD3; /* Acento Vibrante */
+  --chart-5: #2C312D; /* Color Sombra */
+  
+  /* Sidebar con la nueva paleta */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #2C312D;
+  --sidebar-primary: #BDBF65; /* Verde Tomatillo */
+  --sidebar-primary-foreground: #2C312D;
+  --sidebar-accent: #F0EFEA;
+  --sidebar-accent-foreground: #2C312D;
+  --sidebar-border: rgba(44, 49, 45, 0.1);
+  --sidebar-ring: #BDBF65;
 }
 
 .dark {
-  --background: #262626;
-  --foreground: #fafafa;
-  --card: #404040;
-  --card-foreground: #fafafa;
-  --popover: #404040;
-  --popover-foreground: #fafafa;
-  --primary: #e5e5e5;
-  --primary-foreground: #404040;
-  --secondary: #525252;
-  --secondary-foreground: #fafafa;
-  --muted: #525252;
-  --muted-foreground: #a3a3a3;
-  --accent: #525252;
-  --accent-foreground: #fafafa;
-  --destructive: #b91c1c;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.15);
-  --ring: #737373;
-  --chart-1: #3730a3;
-  --chart-2: #0d9488;
-  --chart-3: #d97706;
-  --chart-4: #9333ea;
-  --chart-5: #dc2626;
-  --sidebar: #404040;
-  --sidebar-foreground: #fafafa;
-  --sidebar-primary: #3730a3;
-  --sidebar-primary-foreground: #fafafa;
-  --sidebar-accent: #525252;
-  --sidebar-accent-foreground: #fafafa;
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #737373;
+  /* Modo oscuro adaptado de la nueva paleta */
+  --background: #1A1D1A; /* Versión más oscura de Sombra */
+  --foreground: #F8F7F3; /* Luz para texto */
+  --card: #2C312D; /* Color Sombra */
+  --card-foreground: #F8F7F3;
+  --popover: #2C312D;
+  --popover-foreground: #F8F7F3;
+  --primary: #BDBF65; /* Verde Tomatillo se mantiene */
+  --primary-foreground: #1A1D1A;
+  --secondary: #3D8A9E; /* Versión más oscura del acento frío */
+  --secondary-foreground: #F8F7F3;
+  --muted: #353A36;
+  --muted-foreground: #A0A8A3;
+  --accent: #B56E3F; /* Versión más oscura del acento cálido */
+  --accent-foreground: #F8F7F3;
+  --destructive: #B91C1C;
+  --border: rgba(248, 247, 243, 0.15); /* Luz con opacidad */
+  --input: rgba(248, 247, 243, 0.1);
+  --ring: #BDBF65;
+  
+  /* Charts en modo oscuro */
+  --chart-1: #BDBF65;
+  --chart-2: #5BBDD3;
+  --chart-3: #D79259;
+  --chart-4: #9E5BD3;
+  --chart-5: #F8F7F3;
+  
+  /* Sidebar en modo oscuro */
+  --sidebar: #1A1D1A;
+  --sidebar-foreground: #F8F7F3;
+  --sidebar-primary: #BDBF65;
+  --sidebar-primary-foreground: #1A1D1A;
+  --sidebar-accent: #2C312D;
+  --sidebar-accent-foreground: #F8F7F3;
+  --sidebar-border: rgba(248, 247, 243, 0.1);
+  --sidebar-ring: #BDBF65;
 }
 
 @layer base {
@@ -161,5 +209,32 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Estilos adicionales para títulos */
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+  }
+  
+  /* Subtítulos con Space Mono */
+  .subtitle {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 }

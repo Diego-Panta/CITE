@@ -8,32 +8,32 @@ import GalleryImg6 from "@/assets/images/gallery/gallery_06.webp"
 export const galleryImages = [
   {
     image: GalleryImg1,
-    alt: "Galería Navifest 1",
+    alt: "Galería CITE 1",
     thumb: "thumb1",
   },
   {
     image: GalleryImg2,
-    alt: "Galería Navifest 2",
+    alt: "Galería CITE 2",
     thumb: "thumb2",
   },
   {
     image: GalleryImg3,
-    alt: "Galería Navifest 3",
+    alt: "Galería CITE 3",
     thumb: "thumb3",
   },
   {
     image: GalleryImg4,
-    alt: "Galería Navifest 4",
+    alt: "Galería CITE 4",
     thumb: "thumb4",
   },
   {
     image: GalleryImg5,
-    alt: "Galería Navifest 5",
+    alt: "Galería CITE 5",
     thumb: "thumb5",
   },
   {
     image: GalleryImg6,
-    alt: "Galería Navifest 6",
+    alt: "Galería CITE 6",
     thumb: "thumb6",
   },
 ]
