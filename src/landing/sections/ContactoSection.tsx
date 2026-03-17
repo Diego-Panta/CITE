@@ -75,7 +75,7 @@ export default function ContactoSection() {
     {
       icon: MapPin,
       label: "Ubicación",
-      value: "Chimbote, Ancash, Perú",
+      value: "Lima, Perú",
       link: null,
       color: "#D79259"
     }
