@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, HeartHandshake, ChevronDown } from "lucide-react";
+import { Menu, X, FolderOpen, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface NavbarProps {
@@ -19,16 +19,23 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
     { label: "Contacto", href: "#contacto" }
   ];
 
+  const handleContactClick = () => {
+    document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#2C312D]/10 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-3 cursor-pointer" onClick={scrollToTop}>
-            <div className="w-10 h-10 rounded-xl bg-[#BDBF65] flex items-center justify-center">
-            <span className="text-[#2C312D] font-bold text-xl">C</span>
-            </div>
-            <span className="font-bold tracking-wide text-xl text-[#2C312D]">CITE</span>
+          <div className="flex items-center cursor-pointer" onClick={scrollToTop}>
+            <img
+              src="/logos/CITE_Logotipo principal-SF-03.webp"
+              alt="CITE"
+              className="w-40 h-12 object-contain"
+              loading="eager"
+              decoding="async"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -44,13 +51,22 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
             ))}
           </nav>
 
+          {/* Desktop Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <Button
-              className="bg-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/90 font-bold shadow-md"
-              onClick={() => window.open("/reporte-impacto", "_blank")}
+              variant="outline"
+              className="border-2 border-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/10 font-medium"
+              onClick={() => window.open("/portafolio", "_blank")}
             >
-              <HeartHandshake className="mr-2 h-4 w-4" />
-              Reporte de impacto
+              <FolderOpen className="mr-2 h-4 w-4" />
+              Nuestro portafolio
+            </Button>
+            <Button
+              className="bg-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/90 font-bold shadow-md"
+              onClick={handleContactClick}
+            >
+              <MessageCircle className="mr-2 h-4 w-4" />
+              Sumate a nosotros
             </Button>
           </div>
 
@@ -85,16 +101,32 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
                   {link.label}
                 </a>
               ))}
-              <Button
-                className="w-full bg-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/90 font-bold mt-4"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  window.open("/reporte-impacto", "_blank");
-                }}
-              >
-                <HeartHandshake className="mr-2 h-4 w-4" />
-                Reporte de impacto
-              </Button>
+              
+              {/* Botones en móvil */}
+              <div className="space-y-3 pt-4 border-t border-[#2C312D]/10">
+                <Button
+                  variant="outline"
+                  className="w-full border-2 border-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/10 font-medium"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    window.open("/portafolio", "_blank");
+                  }}
+                >
+                  <FolderOpen className="mr-2 h-4 w-4" />
+                  Nuestro portafolio
+                </Button>
+                
+                <Button
+                  className="w-full bg-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/90 font-bold"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    handleContactClick();
+                  }}
+                >
+                  <MessageCircle className="mr-2 h-4 w-4" />
+                  Contacto
+                </Button>
+              </div>
             </nav>
           </motion.div>
         )}

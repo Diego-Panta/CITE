@@ -9,7 +9,7 @@ import {
   MapPin, 
   Send, 
   Instagram, 
-  Facebook, 
+  Youtube, 
   Linkedin, 
   MessageCircle,
   Users,
@@ -82,9 +82,9 @@ export default function ContactoSection() {
   ];
 
   const socialLinks = [
-    { icon: Instagram, label: "Instagram", link: "https://instagram.com/cite.lab", handle: "@cite.lab", color: "#D79259" },
-    { icon: Facebook, label: "Facebook", link: "https://facebook.com/cite.lab", handle: "CITE Laboratorio Urbano", color: "#5BBDD3" },
-    { icon: Linkedin, label: "LinkedIn", link: "https://linkedin.com/company/cite-lab", handle: "CITE Lab", color: "#9E5BD3" }
+    { icon: Instagram, label: "Instagram", link: "https://www.instagram.com/cite.urb/", handle: "@cite.urb", color: "#D79259" },
+    { icon: Youtube, label: "Youtube", link: "https://www.youtube.com/channel/UCDVi2AdPzPFqyNJjBDU8Lig", handle: "CITE Laboratorio Urbano", color: "#5BBDD3" },
+    { icon: Linkedin, label: "LinkedIn", link: "https://www.linkedin.com/company/cite-ciudadresiliente/", handle: "CITE Lab", color: "#9E5BD3" }
   ];
 
   const tipoOpciones = [

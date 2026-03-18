@@ -101,7 +101,7 @@ export default function LineasAccionSection() {
           })}
         </div>
 
-        <motion.div
+        {/*<motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -116,7 +116,7 @@ export default function LineasAccionSection() {
             Ver proyectos por línea
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

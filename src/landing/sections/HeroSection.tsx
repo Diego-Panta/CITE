@@ -7,9 +7,9 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden min-h-[90vh] flex items-center bg-[#F8F7F3]">
       {/* Elementos de fondo */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0 opacity-10" 
+      {/*<div className="absolute inset-0">
+        <div
+          className="absolute inset-0 opacity-10"
           style={{
             backgroundImage: `radial-gradient(2px 2px at 20% 30%, #2C312D, transparent),
                              radial-gradient(2px 2px at 60% 70%, #2C312D, transparent),
@@ -17,12 +17,12 @@ export default function HeroSection() {
             backgroundSize: "200px 200px, 300px 300px, 250px 250px",
           }}
         />
-      </div>
+      </div>*/}
 
       <div className="max-w-7xl mx-auto px-4 py-4 grid md:grid-cols-2 items-center gap-12 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }} 
-          animate={{ opacity: 1, y: 0 }} 
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="space-y-6"
         >
@@ -46,17 +46,17 @@ export default function HeroSection() {
           </div>
 
           <p className="text-lg md:text-xl text-[#2C312D]/90 leading-relaxed max-w-xl">
-            Un laboratorio urbano que desarrolla proyectos y programas de forma colaborativa para impactar 
+            Un laboratorio urbano que desarrolla proyectos y programas de forma colaborativa para impactar
             positivamente en la mejora de nuestros espacios públicos y la ciudad.
           </p>
 
           <p className="text-[#2C312D]/75 leading-relaxed">
-            Co-creamos soluciones innovadoras a través de metodologías participativas que promueven 
+            Co-creamos soluciones innovadoras a través de metodologías participativas que promueven
             soluciones reales para cada territorio.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4">
-            <Button 
+            <Button
               size="lg"
               className="bg-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/90 font-bold shadow-lg shadow-[#BDBF65]/30 transition-all duration-300 hover:scale-105 group"
               onClick={() => document.getElementById("lineas-accion")?.scrollIntoView({ behavior: "smooth" })}
@@ -64,7 +64,7 @@ export default function HeroSection() {
               <Map className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
               Conoce nuestras líneas de acción
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
               className="border-2 border-[#2C312D]/30 bg-transparent hover:bg-[#BDBF65]/10 text-[#2C312D] transition-all duration-300 hover:scale-105 group"
@@ -75,7 +75,7 @@ export default function HeroSection() {
             </Button>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
@@ -95,32 +95,34 @@ export default function HeroSection() {
           </motion.div>
         </motion.div>
 
-        <motion.div 
-          initial={{ opacity: 0, x: 30 }} 
-          animate={{ opacity: 1, x: 0 }} 
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative"
         >
           <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl shadow-black/10">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#BDBF65]/20 to-[#5BBDD3]/20">
-              <img 
-                src="/images/urban-lab.jpg" 
-                alt="Laboratorio urbano CITE" 
-                className="w-full h-full object-cover mix-blend-overlay"
+            <div className="absolute inset-0 bg-gradient-to-br from-[#BDBF65]/20 to-[#5BBDD3]/20 flex items-center justify-center">
+
+              <img
+                src="/IMG_Landing_1.png"
+                alt="Laboratorio urbano CITE"
+                className="w-full h-full object-contain mix-blend-overlay"
               />
+
             </div>
-            
-            {/* Elementos decorativos */}
+
+            {/* Elementos decorativos 
             <div className="absolute top-0 left-0 w-full h-full">
               <div className="absolute top-10 right-10 w-20 h-20 bg-[#BDBF65]/20 rounded-full blur-2xl animate-pulse" />
               <div className="absolute bottom-10 left-10 w-32 h-32 bg-[#D79259]/20 rounded-full blur-3xl animate-pulse delay-75" />
-            </div>
+            </div>*/}
 
-            {/* Cuadrícula urbana */}
+            {/* Cuadrícula urbana 
             <div className="absolute inset-0 opacity-10" style={{
               backgroundImage: "linear-gradient(#2C312D 1px, transparent 1px), linear-gradient(90deg, #2C312D 1px, transparent 1px)",
               backgroundSize: "30px 30px"
-            }} />
+            }} />*/}
           </div>
 
           <motion.div
@@ -131,10 +133,16 @@ export default function HeroSection() {
           >
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-[#BDBF65] flex items-center justify-center">
-                <span className="text-[#2C312D] font-bold">C</span>
+                <img
+                  src="/logos/Logo_CITE_Verde.png"
+                  alt="CITE"
+                  className="w-100 h-100 object-contain"
+                  loading="eager"
+                  decoding="async"
+                />
               </div>
               <div>
-                <div className="text-sm font-medium text-[#2C312D]">CITE · Laboratorio urbano</div>
+                <div className="text-sm font-medium text-[#2C312D]">Laboratorio urbano</div>
                 <div className="text-xs text-[#2C312D]/60">Personas · Territorio · Innovación</div>
               </div>
             </div>

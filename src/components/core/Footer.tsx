@@ -11,10 +11,13 @@ export default function Footer() {
           {/* Columna 1: Info CITE - Ocupa 1 columna en mobile y 1 en desktop */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-[#BDBF65] flex items-center justify-center">
-                <span className="text-[#2C312D] font-bold text-lg">C</span>
-              </div>
-              <span className="font-bold text-xl text-[#2C312D]">CITE</span>
+            <img
+                src="/logos/CITE_Logotipo principal-SF-01.webp"
+                alt="CITE"
+                className="w-40 h-12 object-contain"
+                loading="eager"
+                decoding="async"
+              />
             </div>
             <p className="text-[#2C312D]/70 text-sm leading-relaxed mb-3">
               <strong className="text-[#2C312D]">Laboratorio urbano</strong> liderado por juventudes que imagina y construye ciudades más justas.
