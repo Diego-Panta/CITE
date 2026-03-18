@@ -24,7 +24,7 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#2C312D]/10 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -44,7 +44,7 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors"
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
               >
                 {link.label}
               </a>
@@ -55,14 +55,14 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
           <div className="hidden md:flex items-center gap-3">
             <Button
               variant="outline"
-              className="border-2 border-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/10 font-medium"
+              className="border-2 border-primary text-foreground hover:text-primary font-medium"
               onClick={() => window.open("/portafolio", "_blank")}
             >
               <FolderOpen className="mr-2 h-4 w-4" />
               Nuestro portafolio
             </Button>
             <Button
-              className="bg-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/90 font-bold shadow-md"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 font-bold shadow-md"
               onClick={handleContactClick}
             >
               <MessageCircle className="mr-2 h-4 w-4" />
@@ -72,10 +72,13 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg bg-[#BDBF65]/10 hover:bg-[#BDBF65]/20 transition-colors border border-[#BDBF65]/30"
+            className="md:hidden p-2 rounded-lg bg-primary/10 hover:bg-primary/20 transition-colors border border-primary/30"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-6 w-6 text-[#2C312D]" /> : <Menu className="h-6 w-6 text-[#2C312D]" />}
+            {isMenuOpen ? 
+              <X className="h-6 w-6 text-foreground" /> : 
+              <Menu className="h-6 w-6 text-foreground" />
+            }
           </button>
         </div>
       </div>
@@ -88,14 +91,14 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden border-t border-[#2C312D]/10 bg-white"
+            className="md:hidden overflow-hidden border-t border-border bg-white"
           >
             <nav className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block py-2 text-[#2C312D]/70 hover:text-[#BDBF65] transition-colors font-medium"
+                  className="block py-2 text-foreground/70 hover:text-primary transition-colors font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
@@ -103,10 +106,10 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
               ))}
               
               {/* Botones en móvil */}
-              <div className="space-y-3 pt-4 border-t border-[#2C312D]/10">
+              <div className="space-y-3 pt-4 border-t border-border">
                 <Button
                   variant="outline"
-                  className="w-full border-2 border-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/10 font-medium"
+                  className="w-full border-2 border-primary text-foreground hover:bg-primary/10 font-medium"
                   onClick={() => {
                     setIsMenuOpen(false);
                     window.open("/portafolio", "_blank");
@@ -117,14 +120,14 @@ export default function Navbar({ scrollToTop }: NavbarProps) {
                 </Button>
                 
                 <Button
-                  className="w-full bg-[#BDBF65] text-[#2C312D] hover:bg-[#BDBF65]/90 font-bold"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-bold"
                   onClick={() => {
                     setIsMenuOpen(false);
                     handleContactClick();
                   }}
                 >
                   <MessageCircle className="mr-2 h-4 w-4" />
-                  Contacto
+                  Sumate a nosotros
                 </Button>
               </div>
             </nav>

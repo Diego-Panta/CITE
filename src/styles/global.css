@@ -167,7 +167,7 @@ h1, h2, h3, h4, h5, h6,
 .dark {
   /* Modo oscuro adaptado de la nueva paleta */
   --background: #1A1D1A; /* Versión más oscura de Sombra */
-  --foreground: #F8F7F3; /* Luz para texto */
+  --foreground: #1A1D1A;; /* Luz para texto */
   --card: #2C312D; /* Color Sombra */
   --card-foreground: #F8F7F3;
   --popover: #2C312D;
